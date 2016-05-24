@@ -1,0 +1,13 @@
+{
+	// See http://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "0.1.0",
+	"command": "explorer",
+	"isShellCommand": true,
+	"args": ["file:///F:/wamp/www/SvgEditMaster/editor/svg-edit.html"],
+	"showOutput": "always",
+
+    "windows": {
+        "command": "explorer.exe"
+    }
+}
