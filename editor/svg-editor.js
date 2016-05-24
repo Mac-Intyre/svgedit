@@ -657,6 +657,7 @@ TODOS
 					'#tool_path': 'path',
 					'#tool_text,#layer_rename': 'text',
 					'#tool_image': 'image',
+					'#tool_import': 'image',
 					'#tool_zoom': 'zoom',
 
 					'#tool_clone,#tool_clone_multi': 'clone',
@@ -4963,12 +4964,12 @@ TODOS
 								// create dummy img so we know the default dimensions
 								var imgWidth = 100;
 								var imgHeight = 100;
-								var img = new Image();
+								var img = new Image(imgWidth,imgHeight);
 								img.src = e.target.result;
 								img.style.opacity = 0;
 								img.onload = function() {
-									imgWidth = img.offsetWidth;
-									imgHeight = img.offsetHeight;
+									imgWidth = img.naturalWidth;
+									imgHeight = img.naturalHeight;//offsetHeight;
 									insertNewImage(imgWidth, imgHeight);
 								};
 							};
